@@ -1,0 +1,8 @@
+*.mp4
+*.wav
+*.avi
+*.mkv
+*.mov
+*.mp3
+*.m4a
+.env
