@@ -1,0 +1,303 @@
+2025-03-14 07:08:14,463 - app.routers.analysis - INFO - Uploading video: Interview_video.mp4
+2025-03-14 07:08:14,565 - app.utils.file_utils - INFO - File saved successfully: /app/uploads/videos/f7570c78-784f-4fd4-9fda-4272c7953ef5.mp4
+2025-03-14 07:08:14,568 - app.routers.analysis - INFO - Video uploaded successfully: f7570c78-784f-4fd4-9fda-4272c7953ef5
+2025-03-14 07:08:14,571 - app.services.audio_service - INFO - Extracting audio from video /app/uploads/videos/f7570c78-784f-4fd4-9fda-4272c7953ef5.mp4 to /app/uploads/audio/f7570c78-784f-4fd4-9fda-4272c7953ef5_audio.wav
+2025-03-14 07:08:18,864 - app.services.audio_service - INFO - Audio extraction completed: /app/uploads/audio/f7570c78-784f-4fd4-9fda-4272c7953ef5_audio.wav
+2025-03-14 07:08:18,864 - app.services.transcription_service - INFO - Sending request to Azure Speech Service to transcribe /app/uploads/audio/f7570c78-784f-4fd4-9fda-4272c7953ef5_audio.wav...
+2025-03-14 07:10:17,985 - app.routers.analysis - INFO - Uploading video: interview_positive.mp4
+2025-03-14 07:10:18,026 - app.utils.file_utils - INFO - File saved successfully: /app/uploads/videos/bee2c676-e4c5-4afd-b577-237069339e1c.mp4
+2025-03-14 07:10:18,027 - app.routers.analysis - INFO - Video uploaded successfully: bee2c676-e4c5-4afd-b577-237069339e1c
+2025-03-14 07:10:18,029 - app.services.audio_service - INFO - Extracting audio from video /app/uploads/videos/bee2c676-e4c5-4afd-b577-237069339e1c.mp4 to /app/uploads/audio/bee2c676-e4c5-4afd-b577-237069339e1c_audio.wav
+2025-03-14 07:10:19,294 - app.services.audio_service - INFO - Audio extraction completed: /app/uploads/audio/bee2c676-e4c5-4afd-b577-237069339e1c_audio.wav
+2025-03-14 07:10:19,294 - app.services.transcription_service - INFO - Sending request to Azure Speech Service to transcribe /app/uploads/audio/bee2c676-e4c5-4afd-b577-237069339e1c_audio.wav...
+2025-03-14 07:10:40,371 - app.services.transcription_service - INFO - Transcription successful
+2025-03-14 07:10:40,381 - app.services.transcription_service - INFO - Conversation transcript saved to /app/results/bee2c676-e4c5-4afd-b577-237069339e1c_transcript.json
+2025-03-14 07:10:44,777 - app.services.analysis_service - INFO - Waiting for video to be processed by Gemini AI.
+2025-03-14 07:10:55,128 - app.services.analysis_service - INFO - Waiting for video to be processed by Gemini AI.
+2025-03-14 07:11:05,557 - app.services.analysis_service - INFO - Video processing complete: https://generativelanguage.googleapis.com/v1beta/files/1x03b79ikb5o
+2025-03-14 07:11:05,561 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-03-14 07:11:12,017 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-03-14 07:11:12,020 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-03-14 07:11:14,573 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-03-14 07:11:14,578 - app.services.analysis_service - INFO - Job bee2c676-e4c5-4afd-b577-237069339e1c completed successfully
+2025-03-14 07:20:25,338 - app.routers.analysis - INFO - Uploading video: Interview_video.mp4
+2025-03-14 07:20:25,387 - app.utils.file_utils - INFO - File saved successfully: /app/uploads/videos/87938cdd-f537-468c-b438-45163616bf4f.mp4
+2025-03-14 07:20:25,389 - app.routers.analysis - INFO - Video uploaded successfully: 87938cdd-f537-468c-b438-45163616bf4f
+2025-03-14 07:20:25,391 - app.services.audio_service - INFO - Extracting audio from video /app/uploads/videos/87938cdd-f537-468c-b438-45163616bf4f.mp4 to /app/uploads/audio/87938cdd-f537-468c-b438-45163616bf4f_audio.wav
+2025-03-14 07:20:29,660 - app.services.audio_service - INFO - Audio extraction completed: /app/uploads/audio/87938cdd-f537-468c-b438-45163616bf4f_audio.wav
+2025-03-14 07:20:29,660 - app.services.transcription_service - INFO - Sending request to Azure Speech Service to transcribe /app/uploads/audio/87938cdd-f537-468c-b438-45163616bf4f_audio.wav...
+2025-03-14 07:21:25,461 - app.services.transcription_service - INFO - Transcription successful
+2025-03-14 07:21:25,489 - app.services.transcription_service - INFO - Conversation transcript saved to /app/results/87938cdd-f537-468c-b438-45163616bf4f_transcript.json
+2025-03-14 07:21:32,347 - app.services.analysis_service - INFO - Waiting for video to be processed by Gemini AI.
+2025-03-14 07:21:42,701 - app.services.analysis_service - INFO - Waiting for video to be processed by Gemini AI.
+2025-03-14 07:21:53,132 - app.services.analysis_service - INFO - Waiting for video to be processed by Gemini AI.
+2025-03-14 07:22:03,451 - app.services.analysis_service - INFO - Video processing complete: https://generativelanguage.googleapis.com/v1beta/files/ousvjwxvf9ud
+2025-03-14 07:22:03,455 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-03-14 07:22:25,704 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-03-14 07:22:25,711 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-03-14 07:22:29,444 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-03-14 07:22:29,446 - app.services.analysis_service - ERROR - Error parsing JSON from markdown: Expecting ',' delimiter: line 2 column 138 (char 139)
+2025-03-14 07:22:29,446 - app.services.analysis_service - ERROR - JSON string: {
+    "verbal_communication_score": ["The candidate's verbal communication is acceptable but not strong. The candidate uses filler words (""yeah,"" ""means,"" ""like"") and has some grammatical errors, which impacts clarity. The candidate also struggles to articulate thoughts concisely and sometimes repeats information. The candidate's vocabulary is adequate for basic explanations but lacks depth. Overall, the verbal communication is understandable but could be significantly improved. ", 6],
+    "non_verbal_communication_and_body_language_score": ["The candidate's non-verbal communication is generally positive. The candidate maintains consistent eye contact and displays calm and composed body language. Facial expressions are neutral with occasional smiles, indicating engagement. There are no significant distractions in body language. Overall, the non-verbal cues support a professional demeanor. ", 7],
+    "emotional_and_vocal_tone_analysis_score": ["The candidate's vocal tone is calm and polite, but lacks enthusiasm and energy. There are hesitations and uncertainty in the voice, suggesting a lack of complete confidence. The tone remains consistent without significant modulation or emotional expression. This indicates a need for more dynamic and confident vocal delivery. ", 6],
+    "skills_experience_professional_competence_score": ["The candidate demonstrates a basic understanding of manual testing concepts and some familiarity with tools like Jira and Postman. However, the candidate struggles to provide in-depth explanations and lacks knowledge in areas like defect cascading, API testing specifics (local vs. global variables in Postman), and security testing concepts (authentication vs. authorization). The candidate's experience seems limited, and the candidate needs to broaden the technical knowledge base. ", 5],
+    "motivation_adaptability_professional_attitude_score": ["The candidate expresses motivation to learn and improve, as evidenced by the candidate's feedback on the channel's content. The candidate is polite and thankful for the opportunity. However, the candidate's adaptability is not clearly demonstrated in the responses to scenario-based questions, where the candidate struggles to provide comprehensive solutions. The candidate shows a willingness to learn from feedback, which is a positive sign. ", 7]
+}
+2025-03-14 07:22:29,447 - app.services.analysis_service - ERROR - Error scoring candidate: Failed to parse analysis result: Expecting ',' delimiter: line 2 column 138 (char 139)
+2025-03-14 07:22:29,448 - app.services.analysis_service - ERROR - Error processing job 87938cdd-f537-468c-b438-45163616bf4f: Failed to score candidate: Failed to parse analysis result: Expecting ',' delimiter: line 2 column 138 (char 139)
+2025-03-14 07:38:58,428 - app.routers.analysis - INFO - Uploading video: interview_positive.mp4
+2025-03-14 07:38:58,459 - app.utils.file_utils - INFO - File saved successfully: /app/uploads/videos/b77acfbe-114e-4c72-84f0-364803b82dec.mp4
+2025-03-14 07:38:58,461 - app.routers.analysis - INFO - Video uploaded successfully: b77acfbe-114e-4c72-84f0-364803b82dec
+2025-03-14 07:38:58,462 - app.services.audio_service - INFO - Extracting audio from video /app/uploads/videos/b77acfbe-114e-4c72-84f0-364803b82dec.mp4 to /app/uploads/audio/b77acfbe-114e-4c72-84f0-364803b82dec_audio.wav
+2025-03-14 07:38:59,760 - app.services.audio_service - INFO - Audio extraction completed: /app/uploads/audio/b77acfbe-114e-4c72-84f0-364803b82dec_audio.wav
+2025-03-14 07:38:59,763 - app.services.transcription_service - INFO - Sending request to Azure Speech Service to transcribe /app/uploads/audio/b77acfbe-114e-4c72-84f0-364803b82dec_audio.wav...
+2025-03-14 07:39:21,754 - app.services.transcription_service - INFO - Transcription successful
+2025-03-14 07:39:21,764 - app.services.transcription_service - INFO - Conversation transcript saved to /app/results/b77acfbe-114e-4c72-84f0-364803b82dec_transcript.json
+2025-03-14 07:39:25,876 - app.services.analysis_service - INFO - Waiting for video to be processed by Gemini AI.
+2025-03-14 07:39:36,207 - app.services.analysis_service - INFO - Waiting for video to be processed by Gemini AI.
+2025-03-14 07:39:46,662 - app.services.analysis_service - INFO - Video processing complete: https://generativelanguage.googleapis.com/v1beta/files/srkyko6bw9y3
+2025-03-14 07:39:46,665 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-03-14 07:39:53,030 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-03-14 07:39:53,035 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-03-14 07:39:55,612 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-03-14 07:39:55,623 - app.services.analysis_service - INFO - Job b77acfbe-114e-4c72-84f0-364803b82dec completed successfully
+2025-03-14 07:42:15,224 - app.routers.analysis - INFO - Uploading video: interview_positive.mp4
+2025-03-14 07:42:15,260 - app.utils.file_utils - INFO - File saved successfully: /app/uploads/videos/056fd331-b5a5-42b9-9d2c-740b590bb90d.mp4
+2025-03-14 07:42:15,262 - app.routers.analysis - INFO - Video uploaded successfully: 056fd331-b5a5-42b9-9d2c-740b590bb90d
+2025-03-14 07:42:15,269 - app.services.audio_service - INFO - Extracting audio from video /app/uploads/videos/056fd331-b5a5-42b9-9d2c-740b590bb90d.mp4 to /app/uploads/audio/056fd331-b5a5-42b9-9d2c-740b590bb90d_audio.wav
+2025-03-14 07:42:16,514 - app.services.audio_service - INFO - Audio extraction completed: /app/uploads/audio/056fd331-b5a5-42b9-9d2c-740b590bb90d_audio.wav
+2025-03-14 07:42:16,515 - app.services.transcription_service - INFO - Sending request to Azure Speech Service to transcribe /app/uploads/audio/056fd331-b5a5-42b9-9d2c-740b590bb90d_audio.wav...
+2025-03-14 07:42:37,875 - app.services.transcription_service - INFO - Transcription successful
+2025-03-14 07:42:37,888 - app.services.transcription_service - INFO - Conversation transcript saved to /app/results/056fd331-b5a5-42b9-9d2c-740b590bb90d_transcript.json
+2025-03-14 07:42:42,356 - app.services.analysis_service - INFO - Waiting for video to be processed by Gemini AI.
+2025-03-14 07:42:53,830 - app.services.analysis_service - INFO - Video processing complete: https://generativelanguage.googleapis.com/v1beta/files/1nsizg78d3gp
+2025-03-14 07:42:53,839 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-03-14 07:43:02,081 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-03-14 07:43:02,083 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-03-14 07:43:04,504 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-03-14 07:43:04,510 - app.services.analysis_service - INFO - Job 056fd331-b5a5-42b9-9d2c-740b590bb90d completed successfully
+2025-03-14 07:49:53,653 - app.routers.analysis - INFO - Uploading video: interview_positive.mp4
+2025-03-14 07:49:53,679 - app.utils.file_utils - INFO - File saved successfully: /app/uploads/videos/1e363596-57f7-406f-a076-feedb2ad2fd4.mp4
+2025-03-14 07:49:53,681 - app.routers.analysis - INFO - Video uploaded successfully: 1e363596-57f7-406f-a076-feedb2ad2fd4
+2025-03-14 07:49:53,683 - app.services.audio_service - INFO - Extracting audio from video /app/uploads/videos/1e363596-57f7-406f-a076-feedb2ad2fd4.mp4 to /app/uploads/audio/1e363596-57f7-406f-a076-feedb2ad2fd4_audio.wav
+2025-03-14 07:49:54,922 - app.services.audio_service - INFO - Audio extraction completed: /app/uploads/audio/1e363596-57f7-406f-a076-feedb2ad2fd4_audio.wav
+2025-03-14 07:49:54,922 - app.services.transcription_service - INFO - Sending request to Azure Speech Service to transcribe /app/uploads/audio/1e363596-57f7-406f-a076-feedb2ad2fd4_audio.wav...
+2025-03-14 07:50:21,669 - app.services.transcription_service - INFO - Transcription successful
+2025-03-14 07:50:21,683 - app.services.transcription_service - INFO - Conversation transcript saved to /app/results/1e363596-57f7-406f-a076-feedb2ad2fd4_transcript.json
+2025-03-14 07:50:26,302 - app.services.analysis_service - INFO - Waiting for video to be processed by Gemini AI.
+2025-03-14 07:50:36,621 - app.services.analysis_service - INFO - Waiting for video to be processed by Gemini AI.
+2025-03-14 07:50:47,051 - app.services.analysis_service - INFO - Video processing complete: https://generativelanguage.googleapis.com/v1beta/files/bq1of3wo0lcy
+2025-03-14 07:50:47,053 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-03-14 07:50:54,853 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-03-14 07:50:54,856 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-03-14 07:50:58,327 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-03-14 07:50:58,334 - app.services.analysis_service - INFO - Job 1e363596-57f7-406f-a076-feedb2ad2fd4 completed successfully
+2025-03-14 07:58:01,929 - app.routers.analysis - INFO - Uploading video: interview_positive.mp4
+2025-03-14 07:58:01,953 - app.utils.file_utils - INFO - File saved successfully: /app/uploads/videos/477b54bd-f322-4f3a-acf0-a870a81c02c0.mp4
+2025-03-14 07:58:01,955 - app.routers.analysis - INFO - Video uploaded successfully: 477b54bd-f322-4f3a-acf0-a870a81c02c0
+2025-03-14 07:58:01,957 - app.services.audio_service - INFO - Extracting audio from video /app/uploads/videos/477b54bd-f322-4f3a-acf0-a870a81c02c0.mp4 to /app/uploads/audio/477b54bd-f322-4f3a-acf0-a870a81c02c0_audio.wav
+2025-03-14 07:58:03,210 - app.services.audio_service - INFO - Audio extraction completed: /app/uploads/audio/477b54bd-f322-4f3a-acf0-a870a81c02c0_audio.wav
+2025-03-14 07:58:03,210 - app.services.transcription_service - INFO - Sending request to Azure Speech Service to transcribe /app/uploads/audio/477b54bd-f322-4f3a-acf0-a870a81c02c0_audio.wav...
+2025-03-14 07:58:26,854 - app.services.transcription_service - INFO - Transcription successful
+2025-03-14 07:58:26,882 - app.services.transcription_service - INFO - Conversation transcript saved to /app/results/477b54bd-f322-4f3a-acf0-a870a81c02c0_transcript.json
+2025-03-14 07:58:31,756 - app.services.analysis_service - INFO - Waiting for video to be processed by Gemini AI.
+2025-03-14 07:58:42,287 - app.services.analysis_service - INFO - Video processing complete: https://generativelanguage.googleapis.com/v1beta/files/6g9z3lp4rpmh
+2025-03-14 07:58:42,290 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-03-14 07:58:50,007 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-03-14 07:58:50,009 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-03-14 07:58:53,462 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-03-14 07:58:53,466 - app.services.analysis_service - INFO - Job 477b54bd-f322-4f3a-acf0-a870a81c02c0 completed successfully
+2025-03-14 08:00:39,363 - app.routers.analysis - INFO - Uploading video: interview_positive.mp4
+2025-03-14 08:00:39,386 - app.utils.file_utils - INFO - File saved successfully: /app/uploads/videos/b7d3da6e-beab-4fa4-9183-a5bac309b0aa.mp4
+2025-03-14 08:00:39,388 - app.routers.analysis - INFO - Video uploaded successfully: b7d3da6e-beab-4fa4-9183-a5bac309b0aa
+2025-03-14 08:00:39,389 - app.services.audio_service - INFO - Extracting audio from video /app/uploads/videos/b7d3da6e-beab-4fa4-9183-a5bac309b0aa.mp4 to /app/uploads/audio/b7d3da6e-beab-4fa4-9183-a5bac309b0aa_audio.wav
+2025-03-14 08:00:40,714 - app.services.audio_service - INFO - Audio extraction completed: /app/uploads/audio/b7d3da6e-beab-4fa4-9183-a5bac309b0aa_audio.wav
+2025-03-14 08:00:40,714 - app.services.transcription_service - INFO - Sending request to Azure Speech Service to transcribe /app/uploads/audio/b7d3da6e-beab-4fa4-9183-a5bac309b0aa_audio.wav...
+2025-03-14 08:01:00,892 - app.services.transcription_service - INFO - Transcription successful
+2025-03-14 08:01:00,908 - app.services.transcription_service - INFO - Conversation transcript saved to /app/results/b7d3da6e-beab-4fa4-9183-a5bac309b0aa_transcript.json
+2025-03-14 08:01:06,379 - app.services.analysis_service - INFO - Waiting for video to be processed by Gemini AI.
+2025-03-14 08:01:17,687 - app.services.analysis_service - INFO - Video processing complete: https://generativelanguage.googleapis.com/v1beta/files/3y7hjc7p0g1e
+2025-03-14 08:01:17,690 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-03-14 08:01:25,225 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-03-14 08:01:25,229 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-03-14 08:01:28,507 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-03-14 08:01:28,510 - app.services.analysis_service - INFO - Job b7d3da6e-beab-4fa4-9183-a5bac309b0aa completed successfully
+2025-03-14 08:11:50,829 - app.routers.analysis - INFO - Uploading video: interview_positive.mp4
+2025-03-14 08:11:50,856 - app.utils.file_utils - INFO - File saved successfully: /app/uploads/videos/a6c12e57-b07d-4c38-b46d-30a3c57fb3fa.mp4
+2025-03-14 08:11:50,858 - app.routers.analysis - INFO - Video uploaded successfully: a6c12e57-b07d-4c38-b46d-30a3c57fb3fa
+2025-03-14 08:11:50,860 - app.services.audio_service - INFO - Extracting audio from video /app/uploads/videos/a6c12e57-b07d-4c38-b46d-30a3c57fb3fa.mp4 to /app/uploads/audio/a6c12e57-b07d-4c38-b46d-30a3c57fb3fa_audio.wav
+2025-03-14 08:11:52,111 - app.services.audio_service - INFO - Audio extraction completed: /app/uploads/audio/a6c12e57-b07d-4c38-b46d-30a3c57fb3fa_audio.wav
+2025-03-14 08:11:52,111 - app.services.transcription_service - INFO - Sending request to Azure Speech Service to transcribe /app/uploads/audio/a6c12e57-b07d-4c38-b46d-30a3c57fb3fa_audio.wav...
+2025-03-14 08:12:13,095 - app.services.transcription_service - INFO - Transcription successful
+2025-03-14 08:12:13,107 - app.services.transcription_service - INFO - Conversation transcript saved to /app/results/a6c12e57-b07d-4c38-b46d-30a3c57fb3fa_transcript.json
+2025-03-14 08:12:16,360 - app.services.analysis_service - INFO - Waiting for video to be processed by Gemini AI.
+2025-03-14 08:12:26,679 - app.services.analysis_service - INFO - Video processing complete: https://generativelanguage.googleapis.com/v1beta/files/wo7u8xow5bbg
+2025-03-14 08:12:26,681 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-03-14 08:12:32,230 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-03-14 08:12:32,232 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-03-14 08:12:34,797 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-03-14 08:12:34,799 - app.services.analysis_service - INFO - Job a6c12e57-b07d-4c38-b46d-30a3c57fb3fa completed successfully
+2025-03-14 08:24:36,572 - app.routers.analysis - INFO - Uploading video: interview_positive.mp4
+2025-03-14 08:24:36,605 - app.utils.file_utils - INFO - File saved successfully: /app/uploads/videos/41474049-fa39-4bb6-af7a-de3ed4f7a5db.mp4
+2025-03-14 08:24:36,607 - app.routers.analysis - INFO - Video uploaded successfully: 41474049-fa39-4bb6-af7a-de3ed4f7a5db
+2025-03-14 08:24:36,609 - app.services.audio_service - INFO - Extracting audio from video /app/uploads/videos/41474049-fa39-4bb6-af7a-de3ed4f7a5db.mp4 to /app/uploads/audio/41474049-fa39-4bb6-af7a-de3ed4f7a5db_audio.wav
+2025-03-14 08:24:37,876 - app.services.audio_service - INFO - Audio extraction completed: /app/uploads/audio/41474049-fa39-4bb6-af7a-de3ed4f7a5db_audio.wav
+2025-03-14 08:24:37,876 - app.services.transcription_service - INFO - Sending request to Azure Speech Service to transcribe /app/uploads/audio/41474049-fa39-4bb6-af7a-de3ed4f7a5db_audio.wav...
+2025-03-14 08:25:02,328 - app.services.transcription_service - INFO - Transcription successful
+2025-03-14 08:25:02,340 - app.services.transcription_service - INFO - Conversation transcript saved to /app/results/41474049-fa39-4bb6-af7a-de3ed4f7a5db_transcript.json
+2025-03-14 08:25:06,590 - app.services.analysis_service - INFO - Waiting for video to be processed by Gemini AI.
+2025-03-14 08:25:16,918 - app.services.analysis_service - INFO - Waiting for video to be processed by Gemini AI.
+2025-03-14 08:25:27,276 - app.services.analysis_service - INFO - Video processing complete: https://generativelanguage.googleapis.com/v1beta/files/htdseet9ymo1
+2025-03-14 08:25:27,281 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-03-14 08:25:34,119 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-03-14 08:25:34,130 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-03-14 08:25:37,460 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-03-14 08:25:37,464 - app.services.analysis_service - INFO - Job 41474049-fa39-4bb6-af7a-de3ed4f7a5db completed successfully
+2025-03-14 08:29:26,524 - app.routers.analysis - INFO - Uploading video: interview_positive.mp4
+2025-03-14 08:29:26,549 - app.utils.file_utils - INFO - File saved successfully: /app/uploads/videos/19cb3c7d-2cce-4613-bf96-cef1af69e156.mp4
+2025-03-14 08:29:26,551 - app.routers.analysis - INFO - Video uploaded successfully: 19cb3c7d-2cce-4613-bf96-cef1af69e156
+2025-03-14 08:29:26,553 - app.services.audio_service - INFO - Extracting audio from video /app/uploads/videos/19cb3c7d-2cce-4613-bf96-cef1af69e156.mp4 to /app/uploads/audio/19cb3c7d-2cce-4613-bf96-cef1af69e156_audio.wav
+2025-03-14 08:29:27,886 - app.services.audio_service - INFO - Audio extraction completed: /app/uploads/audio/19cb3c7d-2cce-4613-bf96-cef1af69e156_audio.wav
+2025-03-14 08:29:27,886 - app.services.transcription_service - INFO - Sending request to Azure Speech Service to transcribe /app/uploads/audio/19cb3c7d-2cce-4613-bf96-cef1af69e156_audio.wav...
+2025-03-14 08:29:47,452 - app.services.transcription_service - INFO - Transcription successful
+2025-03-14 08:29:47,463 - app.services.transcription_service - INFO - Conversation transcript saved to /app/results/19cb3c7d-2cce-4613-bf96-cef1af69e156_transcript.json
+2025-03-14 08:29:51,004 - app.services.analysis_service - INFO - Waiting for video to be processed by Gemini AI.
+2025-03-14 08:30:01,419 - app.services.analysis_service - INFO - Waiting for video to be processed by Gemini AI.
+2025-03-14 08:30:11,870 - app.services.analysis_service - INFO - Video processing complete: https://generativelanguage.googleapis.com/v1beta/files/mzsmykss82e1
+2025-03-14 08:30:11,874 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-03-14 08:30:19,890 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-03-14 08:30:19,895 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-03-14 08:30:22,424 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-03-14 08:30:22,431 - app.services.analysis_service - INFO - Job 19cb3c7d-2cce-4613-bf96-cef1af69e156 completed successfully
+2025-03-14 08:32:46,079 - app.routers.analysis - INFO - Uploading video: interview_positive.mp4
+2025-03-14 08:32:46,110 - app.utils.file_utils - INFO - File saved successfully: /app/uploads/videos/a160b610-d811-456d-a3dd-9c205cc4a5fe.mp4
+2025-03-14 08:32:46,113 - app.routers.analysis - INFO - Video uploaded successfully: a160b610-d811-456d-a3dd-9c205cc4a5fe
+2025-03-14 08:32:46,116 - app.services.audio_service - INFO - Extracting audio from video /app/uploads/videos/a160b610-d811-456d-a3dd-9c205cc4a5fe.mp4 to /app/uploads/audio/a160b610-d811-456d-a3dd-9c205cc4a5fe_audio.wav
+2025-03-14 08:32:47,296 - app.services.audio_service - INFO - Audio extraction completed: /app/uploads/audio/a160b610-d811-456d-a3dd-9c205cc4a5fe_audio.wav
+2025-03-14 08:32:47,297 - app.services.transcription_service - INFO - Sending request to Azure Speech Service to transcribe /app/uploads/audio/a160b610-d811-456d-a3dd-9c205cc4a5fe_audio.wav...
+2025-03-14 08:33:07,199 - app.services.transcription_service - INFO - Transcription successful
+2025-03-14 08:33:07,211 - app.services.transcription_service - INFO - Conversation transcript saved to /app/results/a160b610-d811-456d-a3dd-9c205cc4a5fe_transcript.json
+2025-03-14 08:33:10,709 - app.services.analysis_service - INFO - Waiting for video to be processed by Gemini AI.
+2025-03-14 08:33:21,032 - app.services.analysis_service - INFO - Video processing complete: https://generativelanguage.googleapis.com/v1beta/files/712il4c2jefr
+2025-03-14 08:33:21,034 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-03-14 08:33:26,639 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-03-14 08:33:26,642 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-03-14 08:33:29,094 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-03-14 08:33:29,101 - app.services.analysis_service - INFO - Job a160b610-d811-456d-a3dd-9c205cc4a5fe completed successfully
+2025-03-14 08:42:00,565 - app.routers.analysis - INFO - Uploading video: interview_positive.mp4
+2025-03-14 08:42:00,601 - app.utils.file_utils - INFO - File saved successfully: /app/uploads/videos/9ce3beee-7247-4c81-952a-ab2396b9fa10.mp4
+2025-03-14 08:42:00,604 - app.routers.analysis - INFO - Video uploaded successfully: 9ce3beee-7247-4c81-952a-ab2396b9fa10
+2025-03-14 08:42:00,607 - app.services.audio_service - INFO - Extracting audio from video /app/uploads/videos/9ce3beee-7247-4c81-952a-ab2396b9fa10.mp4 to /app/uploads/audio/9ce3beee-7247-4c81-952a-ab2396b9fa10_audio.wav
+2025-03-14 08:42:01,844 - app.services.audio_service - INFO - Audio extraction completed: /app/uploads/audio/9ce3beee-7247-4c81-952a-ab2396b9fa10_audio.wav
+2025-03-14 08:42:01,845 - app.services.transcription_service - INFO - Sending request to Azure Speech Service to transcribe /app/uploads/audio/9ce3beee-7247-4c81-952a-ab2396b9fa10_audio.wav...
+2025-03-14 08:42:20,786 - app.services.transcription_service - INFO - Transcription successful
+2025-03-14 08:42:20,794 - app.services.transcription_service - INFO - Conversation transcript saved to /app/results/9ce3beee-7247-4c81-952a-ab2396b9fa10_transcript.json
+2025-03-14 08:42:24,452 - app.services.analysis_service - INFO - Waiting for video to be processed by Gemini AI.
+2025-03-14 08:42:34,799 - app.services.analysis_service - INFO - Video processing complete: https://generativelanguage.googleapis.com/v1beta/files/xb72xnyfyfbq
+2025-03-14 08:42:34,803 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-03-14 08:42:40,233 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-03-14 08:42:40,235 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-03-14 08:42:42,586 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-03-14 08:42:42,592 - app.services.analysis_service - INFO - Job 9ce3beee-7247-4c81-952a-ab2396b9fa10 completed successfully
+2025-03-14 08:45:37,374 - app.routers.analysis - INFO - Uploading video: interview_positive.mp4
+2025-03-14 08:45:37,403 - app.utils.file_utils - INFO - File saved successfully: /app/uploads/videos/3ff074d4-7e65-4136-9d72-b1daab8d143b.mp4
+2025-03-14 08:45:37,405 - app.routers.analysis - INFO - Video uploaded successfully: 3ff074d4-7e65-4136-9d72-b1daab8d143b
+2025-03-14 08:45:37,407 - app.services.audio_service - INFO - Extracting audio from video /app/uploads/videos/3ff074d4-7e65-4136-9d72-b1daab8d143b.mp4 to /app/uploads/audio/3ff074d4-7e65-4136-9d72-b1daab8d143b_audio.wav
+2025-03-14 08:45:38,695 - app.services.audio_service - INFO - Audio extraction completed: /app/uploads/audio/3ff074d4-7e65-4136-9d72-b1daab8d143b_audio.wav
+2025-03-14 08:45:38,696 - app.services.transcription_service - INFO - Sending request to Azure Speech Service to transcribe /app/uploads/audio/3ff074d4-7e65-4136-9d72-b1daab8d143b_audio.wav...
+2025-03-14 08:46:01,667 - app.services.transcription_service - INFO - Transcription successful
+2025-03-14 08:46:01,674 - app.services.transcription_service - INFO - Conversation transcript saved to /app/results/3ff074d4-7e65-4136-9d72-b1daab8d143b_transcript.json
+2025-03-14 08:46:06,049 - app.services.analysis_service - INFO - Waiting for video to be processed by Gemini AI.
+2025-03-14 08:46:16,388 - app.services.analysis_service - INFO - Waiting for video to be processed by Gemini AI.
+2025-03-14 08:46:26,903 - app.services.analysis_service - INFO - Video processing complete: https://generativelanguage.googleapis.com/v1beta/files/g1h28gsyrnwb
+2025-03-14 08:46:26,904 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-03-14 08:46:33,332 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-03-14 08:46:33,334 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-03-14 08:46:35,852 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-03-14 08:46:35,857 - app.services.analysis_service - INFO - Job 3ff074d4-7e65-4136-9d72-b1daab8d143b completed successfully
+2025-03-14 09:08:30,178 - root - INFO - Application started, directories created
+2025-03-14 09:08:34,867 - root - INFO - Application started, directories created
+2025-03-14 09:09:04,717 - root - INFO - Application started, directories created
+2025-03-14 09:12:42,633 - root - INFO - Application started, directories created
+2025-03-14 09:15:40,827 - root - INFO - Application started, directories created
+2025-03-14 09:15:54,153 - app.routers.analysis - INFO - Uploading video: interview_positive.mp4
+2025-03-14 09:15:54,216 - app.utils.file_utils - INFO - File saved successfully: /app/uploads/videos/cab628c5-ea54-4c6d-a440-5be9b357f4b8.mp4
+2025-03-14 09:15:54,287 - app.routers.analysis - INFO - Celery task 910ff99b-b222-4461-b1f5-7b8f9d9793f9 started for job cab628c5-ea54-4c6d-a440-5be9b357f4b8
+2025-03-14 09:15:54,287 - app.routers.analysis - INFO - Video uploaded successfully: cab628c5-ea54-4c6d-a440-5be9b357f4b8
+2025-03-14 09:18:19,193 - root - INFO - Application started, directories created
+2025-03-14 09:18:39,756 - app.routers.analysis - INFO - Uploading video: interview_positive.mp4
+2025-03-14 09:18:39,855 - app.utils.file_utils - INFO - File saved successfully: /app/uploads/videos/74245321-7a90-45f6-aab2-331345780ae1.mp4
+2025-03-14 09:18:39,920 - app.routers.analysis - INFO - Celery task bc433f72-0b76-49d4-9fb4-d0247953e54f started for job 74245321-7a90-45f6-aab2-331345780ae1
+2025-03-14 09:18:39,920 - app.routers.analysis - INFO - Video uploaded successfully: 74245321-7a90-45f6-aab2-331345780ae1
+2025-03-14 09:25:33,921 - root - INFO - Application started, directories created
+2025-03-14 09:25:35,069 - root - INFO - Application started, directories created
+2025-03-14 09:25:36,516 - root - INFO - Application started, directories created
+2025-03-14 09:26:01,555 - root - INFO - Application started, directories created
+2025-03-14 09:26:13,255 - root - INFO - Application started, directories created
+2025-03-14 09:26:14,162 - root - INFO - Application started, directories created
+2025-03-14 09:27:24,239 - root - INFO - Application started, directories created
+2025-03-14 09:27:25,088 - root - INFO - Application started, directories created
+2025-03-14 09:27:45,788 - root - INFO - Application started, directories created
+2025-03-14 09:28:13,149 - root - INFO - Application started, directories created
+2025-03-14 09:28:36,497 - root - INFO - Application started, directories created
+2025-03-14 09:28:37,687 - root - INFO - Application started, directories created
+2025-03-14 09:29:25,525 - root - INFO - Application started, directories created
+2025-03-14 09:29:26,722 - root - INFO - Application started, directories created
+2025-03-14 09:29:45,513 - root - INFO - Application started, directories created
+2025-03-14 09:30:46,910 - root - INFO - Application started, directories created
+2025-03-14 09:30:47,753 - root - INFO - Application started, directories created
+2025-03-14 09:30:48,712 - root - INFO - Application started, directories created
+2025-03-14 09:31:01,488 - root - INFO - Application started, directories created
+2025-03-14 09:31:03,177 - root - INFO - Application started, directories created
+2025-03-14 09:31:40,288 - root - INFO - Application started, directories created
+2025-03-14 09:32:09,372 - root - INFO - Application started, directories created
+2025-03-14 09:32:11,178 - root - INFO - Application started, directories created
+2025-03-14 09:32:12,038 - root - INFO - Application started, directories created
+2025-03-14 09:32:15,246 - root - INFO - Application started, directories created
+2025-03-14 09:32:16,513 - root - INFO - Application started, directories created
+2025-03-14 09:32:18,283 - root - INFO - Application started, directories created
+2025-03-14 09:32:20,077 - root - INFO - Application started, directories created
+2025-03-14 09:32:21,359 - root - INFO - Application started, directories created
+2025-03-14 09:32:22,596 - root - INFO - Application started, directories created
+2025-03-14 09:32:23,852 - root - INFO - Application started, directories created
+2025-03-14 09:32:26,920 - root - INFO - Application started, directories created
+2025-03-14 09:32:28,049 - root - INFO - Application started, directories created
+2025-03-14 09:32:29,305 - root - INFO - Application started, directories created
+2025-03-14 09:32:31,077 - root - INFO - Application started, directories created
+2025-03-14 09:32:32,035 - root - INFO - Application started, directories created
+2025-03-14 09:32:39,606 - root - INFO - Application started, directories created
+2025-03-14 09:33:47,270 - root - INFO - Application started, directories created
+2025-03-14 09:33:47,947 - root - INFO - Application started, directories created
+2025-03-14 09:34:03,129 - root - INFO - Application started, directories created
+2025-03-14 09:34:03,858 - root - INFO - Application started, directories created
+2025-03-14 09:34:04,554 - root - INFO - Application started, directories created
+2025-03-14 09:34:05,304 - root - INFO - Application started, directories created
+2025-03-14 09:34:06,028 - root - INFO - Application started, directories created
+2025-03-14 09:34:19,513 - root - INFO - Application started, directories created
+2025-03-14 09:41:18,219 - app.routers.analysis - INFO - Uploading video: Interview_video.mp4
+2025-03-14 09:41:18,259 - app.utils.file_utils - INFO - File saved successfully: /app/uploads/videos/edaa4a38-877f-4ebf-a831-ca320636a064.mp4
+2025-03-14 09:41:18,261 - app.routers.analysis - INFO - Video uploaded successfully: edaa4a38-877f-4ebf-a831-ca320636a064
+2025-03-14 09:41:18,263 - app.services.audio_service - INFO - Extracting audio from video /app/uploads/videos/edaa4a38-877f-4ebf-a831-ca320636a064.mp4 to /app/uploads/audio/edaa4a38-877f-4ebf-a831-ca320636a064_audio.wav
+2025-03-14 09:41:22,731 - app.services.audio_service - INFO - Audio extraction completed: /app/uploads/audio/edaa4a38-877f-4ebf-a831-ca320636a064_audio.wav
+2025-03-14 09:41:22,732 - app.services.transcription_service - INFO - Sending request to Azure Speech Service to transcribe /app/uploads/audio/edaa4a38-877f-4ebf-a831-ca320636a064_audio.wav...
+2025-03-14 09:42:23,828 - app.services.transcription_service - INFO - Transcription successful
+2025-03-14 09:42:23,844 - app.services.transcription_service - INFO - Conversation transcript saved to /app/results/edaa4a38-877f-4ebf-a831-ca320636a064_transcript.json
+2025-03-14 09:42:28,175 - app.services.analysis_service - INFO - Waiting for video to be processed by Gemini AI.
+2025-03-14 09:42:38,508 - app.services.analysis_service - INFO - Waiting for video to be processed by Gemini AI.
+2025-03-14 09:42:48,963 - app.services.analysis_service - INFO - Waiting for video to be processed by Gemini AI.
+2025-03-14 09:42:59,311 - app.services.analysis_service - INFO - Waiting for video to be processed by Gemini AI.
+2025-03-14 09:43:09,723 - app.services.analysis_service - INFO - Video processing complete: https://generativelanguage.googleapis.com/v1beta/files/n9lbs3b5dqd9
+2025-03-14 09:43:09,737 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-03-14 09:43:30,183 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-03-14 09:43:30,190 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-03-14 09:43:33,168 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-03-14 09:43:33,173 - app.services.analysis_service - INFO - Job edaa4a38-877f-4ebf-a831-ca320636a064 completed successfully
+2025-03-14 09:44:30,377 - app.routers.analysis - INFO - Uploading video: interview_positive.mp4
+2025-03-14 09:44:30,427 - app.utils.file_utils - INFO - File saved successfully: /app/uploads/videos/1bb40f00-b55c-4eb1-9f0e-af4bb7986e89.mp4
+2025-03-14 09:44:30,430 - app.routers.analysis - INFO - Video uploaded successfully: 1bb40f00-b55c-4eb1-9f0e-af4bb7986e89
+2025-03-14 09:44:30,432 - app.services.audio_service - INFO - Extracting audio from video /app/uploads/videos/1bb40f00-b55c-4eb1-9f0e-af4bb7986e89.mp4 to /app/uploads/audio/1bb40f00-b55c-4eb1-9f0e-af4bb7986e89_audio.wav
+2025-03-14 09:44:31,631 - app.services.audio_service - INFO - Audio extraction completed: /app/uploads/audio/1bb40f00-b55c-4eb1-9f0e-af4bb7986e89_audio.wav
+2025-03-14 09:44:31,631 - app.services.transcription_service - INFO - Sending request to Azure Speech Service to transcribe /app/uploads/audio/1bb40f00-b55c-4eb1-9f0e-af4bb7986e89_audio.wav...
+2025-03-14 09:44:51,558 - app.services.transcription_service - INFO - Transcription successful
+2025-03-14 09:44:51,569 - app.services.transcription_service - INFO - Conversation transcript saved to /app/results/1bb40f00-b55c-4eb1-9f0e-af4bb7986e89_transcript.json

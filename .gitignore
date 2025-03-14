@@ -6,3 +6,15 @@
 *.mp3
 *.m4a
 .env
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+*.pyw
+*.pyz
+*.pywz
+
+uploads/
+results/
+audio/
+videos/
