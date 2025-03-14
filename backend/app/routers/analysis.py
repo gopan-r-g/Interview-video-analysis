@@ -33,14 +33,10 @@ logger = logging.getLogger(__name__)
 
 @router.post("/upload", response_model=VideoUploadResponse)
 async def upload_video(
-    background_tasks: BackgroundTasks,
     file: UploadFile = File(...),
 ):
     """
     Upload a video file for analysis.
-
-    The video will be processed in the background and the results will be available
-    via the status and results endpoints.
     """
     try:
         logger.info(f"Uploading video: {file.filename}")
@@ -61,8 +57,8 @@ async def upload_video(
         )
         job.video_path = video_path
 
-        # Launch background processing task
-        background_tasks.add_task(process_video_job, job.job_id)
+        # Launch truly asynchronous background processing task
+        asyncio.create_task(process_video_job(job.job_id))
 
         logger.info(f"Video uploaded successfully: {job.job_id}")
 
@@ -151,12 +147,30 @@ async def get_job_results(job_id: str):
 @router.get("/videos/{job_id}")
 async def get_video(job_id: str):
     """
-    Get the uploaded video file.
+    Get the uploaded video file with proper range support.
     """
     job = job_db.get_job(job_id)
     if not job or not job.video_path:
         raise HTTPException(status_code=404, detail="Video not found")
 
+    # Check if the file exists on disk
+    if not os.path.exists(job.video_path):
+        raise HTTPException(status_code=404, detail="Video file not found on disk")
+
+    # Get file extension and size
+    file_extension = os.path.splitext(job.video_path)[1].lower()
+    file_size = os.path.getsize(job.video_path)
+
+    # Determine proper MIME type
+    content_type = "video/mp4"  # Default
+    if file_extension == ".avi":
+        content_type = "video/x-msvideo"
+    elif file_extension == ".mov":
+        content_type = "video/quicktime"
+    elif file_extension == ".webm":
+        content_type = "video/webm"
+
+    # Use simpler FileResponse which handles ranges automatically
     return FileResponse(
-        job.video_path, media_type="video/mp4", filename=job.original_filename
+        job.video_path, media_type=content_type, filename=job.original_filename
     )

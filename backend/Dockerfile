@@ -18,4 +18,4 @@ COPY . .
 EXPOSE 8000
 
 # Update this to include Uvicorn configuration for large uploads
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000", "--timeout-keep-alive", "600"]
+CMD ["uvicorn", "app.main:app","--workers", "1", "--host", "0.0.0.0", "--port", "8000", "--timeout-keep-alive", "600"]

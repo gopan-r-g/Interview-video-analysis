@@ -17,8 +17,12 @@ from app.utils.prompts import (
     SCORING_SYSTEM_PROMPT,
     SCORING_USER_PROMPT,
 )
+import asyncio
+from concurrent.futures import ThreadPoolExecutor
 
 logger = logging.getLogger(__name__)
+# Create a thread pool executor
+thread_pool = ThreadPoolExecutor()
 
 
 def extract_json_from_markdown(markdown_string: str) -> Dict[str, Any]:
@@ -151,33 +155,41 @@ async def process_video_job(job_id: str):
         # Update job status to processing
         job.update_status(ProcessingStatus.PROCESSING, "Starting video processing")
 
-        # Step 1: Extract audio from video
+        # Step 1: Extract audio from video - Run in thread pool
         job.update_status(ProcessingStatus.PROCESSING, "Extracting audio from video")
         job.update_progress(0.1)
-        audio_path = extract_audio_from_video(job.video_path, job_id)
+        audio_path = await asyncio.get_event_loop().run_in_executor(
+            thread_pool, extract_audio_from_video, job.video_path, job_id
+        )
         job.audio_path = audio_path
         job.update_progress(0.2)
 
-        # Step 2: Transcribe audio with speaker diarization
+        # Step 2: Transcribe audio with speaker diarization - Run in thread pool
         job.update_status(ProcessingStatus.PROCESSING, "Transcribing audio")
         job.update_progress(0.3)
-        transcript = transcribe_audio_with_diarization(audio_path, job_id)
+        transcript = await asyncio.get_event_loop().run_in_executor(
+            thread_pool, transcribe_audio_with_diarization, audio_path, job_id
+        )
         job.transcript = transcript
         job.transcript_json_path = os.path.join(
             settings.RESULTS_DIR, f"{job_id}_transcript.json"
         )
         job.update_progress(0.5)
 
-        # Step 3: Analyze body language
+        # Step 3: Analyze body language - Run in thread pool
         job.update_status(ProcessingStatus.PROCESSING, "Analyzing body language")
         job.update_progress(0.6)
-        analysis_result = analyze_body_language(job.video_path, transcript)
+        analysis_result = await asyncio.get_event_loop().run_in_executor(
+            thread_pool, analyze_body_language, job.video_path, transcript
+        )
         job.update_progress(0.8)
 
-        # Step 4: Score candidate
+        # Step 4: Score candidate - Run in thread pool
         job.update_status(ProcessingStatus.PROCESSING, "Scoring candidate")
         job.update_progress(0.9)
-        scoring_result = score_candidate(transcript, analysis_result)
+        scoring_result = await asyncio.get_event_loop().run_in_executor(
+            thread_pool, score_candidate, transcript, analysis_result
+        )
 
         # Combine results
         final_result = {
@@ -187,6 +199,7 @@ async def process_video_job(job_id: str):
         print("#" * 20)
         print(final_result)
         print("#" * 20)
+
         # Save results to a file
         results_path = os.path.join(settings.RESULTS_DIR, f"{job_id}_results.json")
         with open(results_path, "w") as f:
