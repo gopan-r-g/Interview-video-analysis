@@ -16,6 +16,9 @@ function App() {
     setJobId(data.job_id);
     setJobStatus(data);
     
+    // Clear previous analysis results when a new video is uploaded
+    setAnalysisResults(null);
+    
     // Set the video URL to play the uploaded video
     if (data.video_url) {
       setVideoUrl(data.video_url);
@@ -136,7 +139,7 @@ function App() {
       </main>
       
       <footer className="app-footer">
-        <p>&copy; 2023 Video Analysis Tool</p>
+       <p>&copy; {new Date().getFullYear()} Temus PTE Ltd. All rights reserved.</p>
       </footer>
     </div>
   );

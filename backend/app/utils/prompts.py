@@ -10,7 +10,8 @@ Here is the **transcript of the video**:
 </Transcript>  
 
 ### Instructions:  
-1. The video may contain **both the candidate and the interviewer**.  
+1. The video may contain **both the candidate and the interviewer**.
+2. The language of the video may be **English** or **thai**.
 2. **Only analyze the candidate** — ignore the interviewer.  
 3. Analyze the candidate's **verbal communication, non-verbal communication (body language and facial expressions), and emotional/vocal tone**.  
 4. If both **positive and negative behaviors** are present, mention both clearly.  
@@ -49,12 +50,13 @@ Here is the **transcript of the video**:
 ```
 
 IMPORTANT NOTES:
-    - Be specific and balanced — include both positive and negative points, if present.
+    - Include both positive and negative points, if present.
     - Focus only on the candidate, even if others appear in the video.
     - Avoid assumptions — base observations only on visible and audible behavior.
-    - Summarize the overall behavior and communication throughout the video (no need to reference timecodes).
+    - Summarize the overall behavior and communication throughout the video.
     - The final output must strictly follow the JSON format shared above.
-    - Keep your analysis concise, clear, and to the point — professional and useful for evaluation.
+    - Keep your analysis clear and to the point — professional and useful for evaluation.
+    - For each section, provide examples with time code from the interview video.
 """
 
 
@@ -98,7 +100,8 @@ Your goal is to **fairly and professionally assess the candidate's communication
 3. You must **clearly justify each score** based on observations from both the **transcript and video/audio analysis**.  
 4. **Be objective, fair, and professional** — no assumptions, only observations.  
 5. Focus **only on the candidate**, even if others are present.  
-6. Review the **Scoring Guidelines** carefully before assigning scores.  
+6. Review the **Scoring Guidelines** carefully before assigning scores. 
+7. The language of the video may be **English** or **thai**.
 
 ---
 

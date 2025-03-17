@@ -28,7 +28,7 @@ function AnalysisResults({ results }) {
           className={`tab-button ${activeTab === 'analysis' ? 'active' : ''}`}
           onClick={() => setActiveTab('analysis')}
         >
-          Detailed Analysis
+          Body Language Analysis Results
         </button>
       </div>
       

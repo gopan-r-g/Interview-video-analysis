@@ -32,6 +32,7 @@ class Settings(BaseSettings):
 
     # File size limits
     MAX_UPLOAD_SIZE_MB: int = 1024 * 1024 * 500
+    AUDIO_MAX_SIZE_MB: int = 1024 * 1024 * 300
 
     # Create necessary directories
     @property

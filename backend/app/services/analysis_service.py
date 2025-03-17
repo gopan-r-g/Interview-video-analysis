@@ -9,7 +9,10 @@ from google import genai
 from google.genai import types
 from app.config import settings
 from app.models.analysis import job_db, ProcessingStatus
-from app.services.audio_service import extract_audio_from_video
+from app.services.audio_service import (
+    extract_audio_from_video,
+    extract_audio_from_video_with_ffmpeg,
+)
 from app.services.transcription_service import transcribe_audio_with_diarization
 from app.utils.prompts import (
     VIDEO_ANALYSIS_SYSTEM_PROMPT,
@@ -159,8 +162,11 @@ async def process_video_job(job_id: str):
         job.update_status(ProcessingStatus.PROCESSING, "Extracting audio from video")
         job.update_progress(0.1)
         audio_path = await asyncio.get_event_loop().run_in_executor(
-            thread_pool, extract_audio_from_video, job.video_path, job_id
+            thread_pool, extract_audio_from_video_with_ffmpeg, job.video_path, job_id
         )
+        # audio_path = await asyncio.get_event_loop().run_in_executor(
+        #    thread_pool, extract_audio_from_video, job.video_path, job_id
+        # )
         job.audio_path = audio_path
         job.update_progress(0.2)
 
