@@ -1,22 +1,29 @@
 # Interview-video-analysis
 
-This repo consist of a jupyter notebook file which is used to analyze the interview video and generate a report of the candidate's performance.
+This repo is a web application that allows you to analyze interview videos and generate a report of the candidate's performance.
 
 ## Requirements
 
 - Python 3.10
 - pip
+- Docker
 
-## Installation
+### Docker compose Setup:
+
+Steps to setup the app using docker compose:
 
 1. create a .env file and add the following variables:  
 ```bash
 GEMINI_API_KEY = "your_gemini_api_key"
 AZURE_SUBSCRIPTION_KEY = "your_azure_subscription_key"
 ```
-
-2. install the requirements
+2. Build the docker image and run the container
 ```bash
-pip install -r requirements.txt
+docker compose up --build
 ```
-3. run the notebook
+3. Open the browser and navigate to http://localhost:80
+
+
+
+
+
