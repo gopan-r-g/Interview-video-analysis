@@ -15,7 +15,7 @@ Steps to setup the app using docker compose:
 1. create a .env file and add the following variables:  
 ```bash
 GEMINI_API_KEY = "your_gemini_api_key"
-AZURE_SUBSCRIPTION_KEY = "your_azure_subscription_key"
+AZURE_SUBSCRIPTION_KEY = "your_azure_subscription_key" # for azure speech to text (optional)
 ```
 2. Build the docker image and run the container
 ```bash
