@@ -13,11 +13,13 @@ function App() {
   const [videoUrl, setVideoUrl] = useState(null);
 
   const handleUploadSuccess = (data) => {
+    // Clear previous state first to ensure complete reset
+    setAnalysisResults(null);
+    setError(null);
+    
+    // Then set new job information
     setJobId(data.job_id);
     setJobStatus(data);
-    
-    // Clear previous analysis results when a new video is uploaded
-    setAnalysisResults(null);
     
     // Set the video URL to play the uploaded video
     if (data.video_url) {
@@ -27,8 +29,13 @@ function App() {
       setVideoUrl(`/api/v1/videos/${data.job_id}`);
     }
     console.log("Set video URL to:", data.video_url || `/api/v1/videos/${data.job_id}`);
-    setError(null);
     console.log('Upload success, job ID:', data.job_id);
+  };
+
+  const handleStartUpload = () => {
+    // Clear previous results when a new upload begins
+    setAnalysisResults(null);
+    setJobStatus(null);
   };
 
   useEffect(() => {
@@ -110,7 +117,10 @@ function App() {
         
         <div className="card">
           <h2>Upload Video</h2>
-          <UploadForm onUploadSuccess={handleUploadSuccess} />
+          <UploadForm 
+            onUploadSuccess={handleUploadSuccess} 
+            onStartUpload={handleStartUpload} 
+          />
         </div>
         
         {/* Video Player for the uploaded video */}

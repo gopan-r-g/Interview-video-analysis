@@ -19,6 +19,8 @@ from app.utils.prompts import (
     VIDEO_ANALYSIS_USER_PROMPT,
     SCORING_SYSTEM_PROMPT,
     SCORING_USER_PROMPT,
+    AUDIO_SYSTEM_PROMPT,
+    AUDIO_USER_PROMPT,
 )
 import asyncio
 from concurrent.futures import ThreadPoolExecutor
@@ -109,6 +111,58 @@ def analyze_body_language(video_path: str, transcript: str) -> Dict[str, Any]:
         raise Exception(f"Failed to analyze video: {str(e)}")
 
 
+def analyze_audio(audio_path: str) -> Dict[str, Any]:
+    """
+    Analyze audio using Gemini AI.
+    """
+    client = genai.Client(api_key=settings.GEMINI_API_KEY)
+    model_id = settings.GEMINI_MODEL_ID
+
+    try:
+        # Upload the file using the API
+        file_upload = client.files.upload(file=pathlib.Path(audio_path))
+
+        while file_upload.state == "PROCESSING":
+            logger.info("Waiting for audio to be processed by Gemini AI.")
+            time.sleep(10)
+            file_upload = client.files.get(name=file_upload.name)
+
+        if file_upload.state == "FAILED":
+            raise ValueError(f"Audio processing failed with state: {file_upload.state}")
+
+        logger.info(f"Audio processing complete: {file_upload.uri}")
+
+        # Define system and user prompts
+        system_prompt = AUDIO_SYSTEM_PROMPT
+        user_prompt = AUDIO_USER_PROMPT
+
+        # Send request to Gemini
+        response = client.models.generate_content(
+            model=model_id,
+            contents=[
+                types.Content(
+                    role="user",
+                    parts=[
+                        types.Part.from_uri(
+                            file_uri=file_upload.uri, mime_type=file_upload.mime_type
+                        )
+                    ],
+                ),
+                user_prompt,
+            ],
+            config=types.GenerateContentConfig(
+                system_instruction=system_prompt,
+                temperature=0.0,
+            ),
+        )
+
+        return response.text
+
+    except Exception as e:
+        logger.error(f"Error analyzing audio: {str(e)}")
+        raise Exception(f"Failed to analyze audio: {str(e)}")
+
+
 def score_candidate(transcript: str, analysis_result: Dict[str, Any]) -> Dict[str, Any]:
     """
     Score the candidate based on the transcript and analysis result.
@@ -174,11 +228,12 @@ async def process_video_job(job_id: str):
         job.update_status(ProcessingStatus.PROCESSING, "Transcribing audio")
         job.update_progress(0.3)
         transcript = await asyncio.get_event_loop().run_in_executor(
-            thread_pool, transcribe_audio_with_diarization, audio_path, job_id
+            thread_pool, analyze_audio, audio_path
         )
         job.transcript = transcript
+        logger.info(f"Transcript: {transcript}")
         job.transcript_json_path = os.path.join(
-            settings.RESULTS_DIR, f"{job_id}_transcript.json"
+            settings.RESULTS_DIR, f"{job_id}_transcript.txt"
         )
         job.update_progress(0.5)
 

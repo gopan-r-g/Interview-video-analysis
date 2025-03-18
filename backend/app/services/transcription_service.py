@@ -179,6 +179,7 @@ def transcribe_audio_with_diarization(audio_file_path: str, job_id: str) -> str:
             transcript_string = process_transcript_file(
                 transcription_result, output_file
             )
+            logger.info("Transcription completed:", transcript_string)
             return transcript_string
         else:
             error_msg = f"Transcription error: {response.status_code} - {response.text}"

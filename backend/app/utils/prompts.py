@@ -1,5 +1,6 @@
 VIDEO_ANALYSIS_SYSTEM_PROMPT = """When given a video and a query, call the relevant function only once with 
-    the appropriate timecodes and text for the video"""
+    the appropriate timecodes and text for the video.
+    The video may be in **English** or **thai**. Try to understand the language of the video and provide the appropriate analysis."""
 
 VIDEO_ANALYSIS_USER_PROMPT = """
 You are tasked with analyzing an **online interview video** of a candidate. **Your goal is to analyze the candidate's behavior, communication, and emotional expressions** based on the provided video transcript.
@@ -56,7 +57,9 @@ IMPORTANT NOTES:
     - Summarize the overall behavior and communication throughout the video.
     - The final output must strictly follow the JSON format shared above.
     - Keep your analysis clear and to the point — professional and useful for evaluation.
-    - For each section, provide examples with time code from the interview video.
+    - For each section, provide examples with time code from the interview video
+    - The language of the Video may be **English** or **thai**
+    - Try to understand the language of the video and provide the correct analysis.
 """
 
 
@@ -64,6 +67,8 @@ SCORING_SYSTEM_PROMPT = """
 You are a hiring manager and you need to score the candidate. 
 You are also very experienced in hiring and you know what is expected from a candidate in an interview.
 You are also given the transcript of the video and the video and audio analysis report.
+The language of the transcript may be **English** or **thai**.
+Try to understand the language of the transcript and provide the correct analysis.
 """
 
 
@@ -145,4 +150,14 @@ Rate the candidate based on the following transcript and the video and audio ana
     - Maintain a neutral and professional tone.
     - Not necessary to mention information from transcripts and video/audio analysis report in the scores, give reason based on the information provided.
     - Remember: 0 is the lowest score (Very Poor), 10 is the highest (Excellent).
+"""
+AUDIO_SYSTEM_PROMPT = """Given the audio file do speaker diarization and return the transcript with speaker id. Identify the language of the audio file and return the transcript in the same language. the output should be in string format."""
+AUDIO_USER_PROMPT = """
+give me the transcript of the audio file.
+With who said what in the transcript.
+there will be only two speakers in the transcript.
+maker first speaker as speaker 0 and second speaker as speaker 1.
+example output:
+speaker 0: "what speaker 0 said"
+speaker 1: "what speaker 1 said"
 """

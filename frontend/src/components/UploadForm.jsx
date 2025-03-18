@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function UploadForm({ onUploadSuccess }) {
+function UploadForm({ onUploadSuccess, onStartUpload }) {
   const [file, setFile] = useState(null);
   const [isUploading, setIsUploading] = useState(false);
   const [uploadError, setUploadError] = useState(null);
@@ -20,6 +20,8 @@ function UploadForm({ onUploadSuccess }) {
     }
     
     try {
+      if (onStartUpload) onStartUpload();
+      
       setIsUploading(true);
       
       const formData = new FormData();
