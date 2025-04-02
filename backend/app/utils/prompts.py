@@ -156,8 +156,10 @@ AUDIO_USER_PROMPT = """
 give me the transcript of the audio file.
 With who said what in the transcript.
 there will be only two speakers in the transcript.
-maker first speaker as speaker 0 and second speaker as speaker 1.
+maker first speaker as speaker 0 and increment the speaker id for each speaker.
 example output:
-speaker 0: "what speaker 0 said"
-speaker 1: "what speaker 1 said"
+speaker 0: what speaker 0 said
+speaker 1: what speaker 1 said
+speaker 0: what speaker 0 said again
+speaker 2: what speaker 2 said 
 """

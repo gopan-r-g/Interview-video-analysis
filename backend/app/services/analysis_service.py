@@ -228,8 +228,11 @@ async def process_video_job(job_id: str):
         job.update_status(ProcessingStatus.PROCESSING, "Transcribing audio")
         job.update_progress(0.3)
         transcript = await asyncio.get_event_loop().run_in_executor(
-            thread_pool, analyze_audio, audio_path
+            thread_pool, transcribe_audio_with_diarization, audio_path, job_id
         )
+        # transcript = await asyncio.get_event_loop().run_in_executor(
+        #    thread_pool, analyze_audio, audio_path
+        # )
         job.transcript = transcript
         logger.info(f"Transcript: {transcript}")
         job.transcript_json_path = os.path.join(

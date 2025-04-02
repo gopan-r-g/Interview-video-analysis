@@ -28,7 +28,7 @@ function AnalysisResults({ results }) {
           className={`tab-button ${activeTab === 'analysis' ? 'active' : ''}`}
           onClick={() => setActiveTab('analysis')}
         >
-          Body Language Analysis Results
+          Body Language And Voice Analysis Result
         </button>
       </div>
       
@@ -70,9 +70,7 @@ function AnalysisResults({ results }) {
       )}
       
       {activeTab === 'analysis' && (
-        <div className="analysis-tab">
-          <h3>Body Language Analysis</h3>
-          
+        <div className="analysis-tab">          
           {Object.entries(bodyLanguageAnalysis).map(([category, analysis]) => (
             <div key={category} className="analysis-section">
               <h4>{formatCategory(category)}</h4>
